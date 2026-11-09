@@ -1,0 +1,10 @@
+[tools]
+node = "24"
+
+[tasks.test]
+description = "End-to-end smoke test"
+run = "node test/smoke.mjs"
+
+[tasks.try]
+description = "Open a file in the annotation page (usage: mise run try <file>)"
+run = "node plugins/annotate/skills/annotate/annotate.mjs"

@@ -1,0 +1,12 @@
+{
+  "name": "annotate-tools",
+  "owner": { "name": "pairprog.io" },
+  "plugins": [
+    {
+      "name": "annotate",
+      "source": "./plugins/annotate",
+      "description": "Open any file in your browser, comment on lines or highlighted text, and send the comments back to Claude. Works on Windows, macOS and Linux.",
+      "version": "1.0.0"
+    }
+  ]
+}
