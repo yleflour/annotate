@@ -7,11 +7,15 @@ description: Let the user review a file (a plan, spec, doc or code) in their bro
 
 Opens a local browser page showing the file with line numbers. The user clicks or drags line numbers, or highlights text, to leave comments, then presses Send. The comments come back to you on stdout.
 
+Markdown and source files are syntax highlighted (the text shown is still the source), GFM tables are shown as tables, and ```mermaid blocks are drawn as diagrams. A comment on a diagram shape comes back anchored to the whole mermaid block's line range, with `Selected text: "Mermaid diagram, node <id> at line <n>: <label>"` naming the shape and the line where it is written.
+
 Run with the Bash tool, `timeout: 600000`:
 
 ```
 node "${CLAUDE_PLUGIN_ROOT}/skills/annotate/annotate.mjs" "<path to file>"
 ```
+
+If the file has uncommitted git changes, the page can highlight them (diffed with difftastic). When the user wants to review changes, add `--diff unstaged`, `--diff staged` or `--diff all` before the path to choose what is highlighted first (`--diff off` to start with none). The output then says which changes the user was viewing.
 
 Output starts with one of:
 

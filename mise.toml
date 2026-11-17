@@ -2,8 +2,8 @@
 node = "24"
 
 [tasks.test]
-description = "End-to-end smoke test"
-run = "node test/smoke.mjs"
+description = "Markdown and git-changes unit tests, then end-to-end smoke test"
+run = "node test/markdown.test.mjs && node test/changes.test.mjs && node test/smoke.mjs"
 
 [tasks.try]
 description = "Open a file in the annotation page (usage: mise run try <file>)"

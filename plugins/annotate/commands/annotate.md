@@ -1,6 +1,6 @@
 ---
-description: Open a file in the browser so you can comment on it, then have Claude act on the comments
-argument-hint: <file> [what Claude should do with the comments]
+description: Open a file in the browser so you can comment on it, then have your harness act on the comments
+argument-hint: <file> [what your harness should do with the comments]
 allowed-tools: Bash(node:*), Read, Edit, Write, Glob
 ---
 
@@ -13,7 +13,7 @@ Arguments: $ARGUMENTS
 
    node "${CLAUDE_PLUGIN_ROOT}/skills/annotate/annotate.mjs" "<file>"
 
-   It opens the file in the user's browser and blocks until they press Send, then prints their comments.
+   It opens the file in the user's browser and blocks until they press Send, then prints their comments. If they want to review their git changes ("my staged changes", "what I changed"), add `--diff staged`, `--diff unstaged` or `--diff all` before the path.
 3. Handle the output:
    - `ANNOTATIONS for ...`: each comment is anchored to a line range (with the lines or the highlighted text). Read the file, then address every comment. Unless the user said otherwise, make the requested changes; when a comment is a question, answer it. Finish with a short list mapping each comment to what you did.
    - `approved it with no comments`: say so briefly and carry on.

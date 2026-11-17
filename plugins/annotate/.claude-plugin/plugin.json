@@ -1,7 +1,7 @@
 {
   "name": "annotate",
   "version": "1.0.0",
-  "description": "Comment on a file in your browser and hand the comments to Claude. Cross-platform, no dependencies beyond Node.",
+  "description": "Comment on a file in your browser and hand the comments to your harness. Cross-platform, no dependencies beyond Node.",
   "author": { "name": "pairprog.io" },
   "license": "MIT"
 }
