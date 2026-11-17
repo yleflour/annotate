@@ -24,6 +24,12 @@ agentplugins add github:yleflour/annotate//plugins/annotate --target opencode
 
 (`agentplugins` is the [Universal Agent Plugins](https://github.com/777genius/universal-agent-plugins) CLI: `npm i -g universal-agent-plugins`. Omit `--target` to pick agents interactively; pin a commit for reproducible installs: `github:yleflour/annotate@<full-sha>//plugins/annotate`.)
 
+Skills-only installers work too — the skill folder ships the tool itself, so it's fully functional on its own:
+
+```
+npx skills add yleflour/annotate
+```
+
 ## Use
 
 ```
