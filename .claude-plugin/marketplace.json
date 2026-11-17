@@ -1,6 +1,7 @@
 {
   "name": "annotate-tools",
   "owner": { "name": "pairprog.io" },
+  "description": "Comment on files in your browser; line-anchored comments go to your coding agent.",
   "plugins": [
     {
       "name": "annotate",
