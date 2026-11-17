@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "annotate",
+  "version": "1.0.0",
+  "description": "Comment on a file in your browser and hand the line-anchored comments to your coding harness. Cross-platform, no dependencies beyond Node.",
+  "author": { "name": "pairprog.io" },
+  "repository": "https://github.com/yleflour/annotate",
+  "license": "MIT",
+  "keywords": ["review", "annotation", "feedback", "browser", "comments"]
+}

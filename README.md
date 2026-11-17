@@ -14,6 +14,22 @@ Clone or copy this repo somewhere permanent, then in Claude Code:
 
 Or from a terminal: `claude plugin marketplace add <path>` then `claude plugin install annotate@annotate-tools`. Restart your harness. Once pushed to GitHub, others can use `/plugin marketplace add <owner>/<repo>`.
 
+### Other harnesses (OpenCode, Codex, Cursor, …)
+
+The plugin also conforms to the open [Agent Plugins 1.0](https://agent-plugins.org) spec, so any conforming installer works:
+
+```
+agentplugins add github:yleflour/annotate//plugins/annotate --target opencode
+```
+
+(`agentplugins` is the [Universal Agent Plugins](https://github.com/777genius/universal-agent-plugins) CLI: `npm i -g universal-agent-plugins`. Omit `--target` to pick agents interactively; pin a commit for reproducible installs: `github:yleflour/annotate@<full-sha>//plugins/annotate`.)
+
+Skills-only installers work too:
+
+```
+npx skills add yleflour/annotate
+```
+
 ## Use
 
 ```
